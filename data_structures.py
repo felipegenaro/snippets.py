@@ -1,5 +1,11 @@
 # Data Structures
 
+# array -> data sequence
+# pointer -> dynamic memory allocation
+# list -> set of chained elements
+# queue -> First In First Out
+# pile -> Last In First Out
+# tree -> non-linear structure
 
 # List - simple array
 my_list = [10, 'hi', 5, 'hello']

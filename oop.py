@@ -1,5 +1,10 @@
 # OOP
 
+# class -> component
+# inheritance -> reuse
+# abstraction -> centralization of attributes
+# polymorphism -> behavior change
+# encapsulation -> isolation of components
 
 # class class_name(inherits_from)
 class Person(object):
