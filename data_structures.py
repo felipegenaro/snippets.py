@@ -37,3 +37,19 @@ another_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # The squared of each number without usign statements or loops
 squares = [num * num for num in another_list]
 print(squares)
+
+# tree
+# binary tree class
+class Node:
+	def __init__(self, val=0, left=None, right=None):
+		self.val = val
+		self.left = left
+		self.right = right
+
+        def __str__(self):
+                return str(self.__class__) + ": " + str(self.__dict__)
+
+# instance of the binary tree
+root = Node(12, 6, 4)
+
+print(root)
