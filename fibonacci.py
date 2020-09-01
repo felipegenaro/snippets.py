@@ -1,20 +1,3 @@
-# Snippets
-
-# Fizz Buzz
-def Fizz_Buss(end_number):
-        for n in range(0, end_number):
-                if n % 5 == 0 and n % 3 == 0:
-                        print("FizzBuzz")
-                elif n % 3 == 0:
-                        print("Fizz")
-                elif n % 5 == 0:
-                        print("Buzz")
-                else:
-                        print(n)
-
-Fizz_Buss(101)
-
-
 # Fibonacci Sequence
 def Fibonacci_Sequence(fib_numbers):
         a, b = 0, 1
