@@ -4,8 +4,6 @@ def Count_Letters(phrase):
         output = ""
         
         for i in range(len(phrase)):
-                # print phrase[i]
-                # print prev_char
                 if(phrase[i] == prev_char):
                         counter += 1
                 else:
