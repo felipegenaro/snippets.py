@@ -8,6 +8,23 @@
 #
 # """"
 
+def Is_Palidrom(s):
+        if s == s[::-1]:
+                return s, "Yes, is a Palidrom"
+        else:
+                return s, "No, is not a Palidrom"
+
+print(Is_Palidrom("test"))
+print(Is_Palidrom("civic"))
+print(Is_Palidrom("level"))
+print(Is_Palidrom("not"))
+print(Is_Palidrom("madam"))
+print(Is_Palidrom("noon"))
+print(Is_Palidrom("palidrome"))
+print(Is_Palidrom("radar"))
+
+# ---
+
 from collections import defaultdict
 
 def Find_Palidrome(s):
