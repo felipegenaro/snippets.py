@@ -1,17 +1,25 @@
 import time as t
+import random as r
 
 # Sorts can use insertion or comparison
-
-some_array_1 = [10, 7, 8, 3, 4, 9, 5, 1, 2]
-some_array_2 = [10, 7, 8, 3, 4, 9, 5, 1, 2]
-some_array_3 = [10, 7, 8, 3, 4, 9, 5, 1, 2]
-some_array_4 = [10, 7, 8, 3, 4, 9, 5, 1, 2]
 
 # From this list, in classification of the better and most constant algorithm 
 # 1 - Selection Sort
 # 2 - Bubble Sort
 # 3 - Merge Sort
 # 4 - Insertion Sort
+
+# Sample to be analysed
+start_sample_time = t.time()
+random_set = r.sample(range(20000), 10000)
+end_sample_time = t.time() - start_sample_time
+
+some_array_1 = random_set
+some_array_2 = random_set
+some_array_3 = random_set
+some_array_4 = random_set
+
+# ========================================================================
 
 # Comparison Sorts
 
@@ -97,6 +105,8 @@ def Selection_Sort(arr):
         return arr, end_time
 
 
+# There is also Quick Sort, an in-place sorting using a pivot to compare to - O(n^2)
+
 # ========================================================================
 
 # Insertion Sorts
@@ -122,8 +132,44 @@ def Insertion_Sort(arr):
         return arr, end_time
 
 
+# Printing according to the classification above
+print ("Time to get the sample to be sorted", end_sample_time)
+print ("-----------------------------------------------------")
+print ("Selection_Sort_TimeSorting_", Selection_Sort(some_array_3)[1])
+print ("Bubble_Sort_TimeSorting_", Bubble_Sort(some_array_2)[1])
+print ("Merge_Sort_TimeSorting_", Merge_Sort(some_array_1)[1])
+print ("Insertion_Sort_TimeSorting_", Insertion_Sort(some_array_4)[1])
 
-print "Merge_Sort", Merge_Sort(some_array_1)
-print "Bubble_Sort", Bubble_Sort(some_array_2)
-print "Selection_Sort", Selection_Sort(some_array_3)
-print "Insertion_Sort", Insertion_Sort(some_array_4)
+# ========================================================================
+
+# Understanding BIG O Notation
+
+# Big O - Worst
+# Big Ω - Best
+# Big Θ - Average
+
+# O(n Log n) = FOR inside a FOR
+# int n = 100
+# for(int i = 0; i < n; i++) // this loop is executed n times, so O(n)
+# {
+#     for(int j = n; j > 0; j/=2) // this loop is executed O(log n)
+#     {
+#
+#     }
+# }
+
+
+# Both Merge and Heap Sort have the same worst case scenario - O(n Log n)
+# Merge Sort is for a general purpose, more stable (divide and conquer)
+# Heap Sort it is complex to implement
+
+
+# In oder words
+
+# O(1) = O(yeah)
+# O(log n) = O(nice) 
+# O(n) = O(ok)
+# O(n^2) = O(my)
+# O(2^n) = O(no)
+# O(n!) = O(mg!)
+
